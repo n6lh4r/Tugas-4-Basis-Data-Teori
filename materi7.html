@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBLog - Materi 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navigasi">
+    <div class="merek">NBLog</div>
+    <div class="daftar-menu">
+      <a href="index.html">Beranda</a>
+      <div class="turun-menu">
+        <button class="tombol-menu">Menu ▼</button>
+        <div class="isi-menu">
+          <a href="materi1.html">Materi 1</a>
+          <a href="materi2.html">Materi 2</a>
+          <a href="materi3.html">Materi 3</a>
+          <a href="materi4.html">Materi 4</a>
+          <a href="materi5.html">Materi 5</a>
+          <a href="materi6.html">Materi 6</a>
+          <a href="materi7.html">Materi 7</a>
+          <a href="materi8.html">Materi 8</a>
+          <a href="materi9.html">Materi 9</a>
+          <a href="materi10.html">Materi 10</a>
+          <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Isi Materi -->
+  <section class="wadah">
+  <h2>Materi 7</h2>
+  <center><img src="materi_7.jpg" alt="ERD Diagram" class="gambar-materi"></center>
+  <p class="date">12 Oktober 2025</p>
+  <p><center><b>Apa itu PrimaryKey, Foreign Key dan Candidate Key. berikan masing-masih 5 contoh pada penerapan ERD</b> </center></p>
+  <br>
+  <p style="text-align: justify; line-height: 1.6;">
+  <b>1. Primary Key</b> adalah kolom unik yang digunakan untuk mengidentifikasi setiap baris data dalam sebuah tabel. 
+  Kolom ini memiliki nilai yang berbeda di setiap entri dan tidak boleh bernilai <i>NULL</i>. 
+  Dengan adanya <b>Primary Key</b>, sistem basis data dapat mengenali satu data secara spesifik tanpa tertukar dengan data lain. 
+  Misalnya, pada tabel <b>Mahasiswa</b> yang memiliki kolom NIM, Nama, dan Jurusan  kolom <b>NIM</b> dijadikan sebagai 
+  <i>Primary Key</i> karena setiap mahasiswa memiliki NIM yang berbeda.
+</p>
+<hr>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Berikut ini adalah <b>5 contoh penerapan Primary Key</b> dalam tabel yang sering digunakan pada pembuatan <i>Entity Relationship Diagram (ERD)</i>:
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>A. Tabel Mahasiswa</b><br>
+  <b>Kolom:</b> NIM (PK, INT), Nama (VARCHAR(50)), Jurusan (VARCHAR(30))<br>
+  <i>Contoh gambaran sederhana:</i> Kolom <b>NIM</b> dijadikan sebagai Primary Key karena setiap mahasiswa memiliki NIM berbeda yang menjadi <b>identitas unik</b>.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>B. Tabel Dosen</b><br>
+  <b>Kolom:</b> NIP (PK, CHAR(10)), Nama_Dosen (VARCHAR(50)), Mata_Kuliah (VARCHAR(40)), Email (VARCHAR(50))<br>
+  <i>Contoh gambaran sederhana:</i> Kolom <b>NIP</b> digunakan sebagai Primary Key karena setiap dosen memiliki NIP yang <b>tidak mungkin sama</b> antar satu dengan yang lain.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>C. Tabel Mata Kuliah</b><br>
+  <b>Kolom:</b> Kode_MK (PK, VARCHAR(8)), Nama_MK (VARCHAR(50)), SKS (INT(2)), Semester (INT(1))<br>
+  <i>Contoh gambaran sederhana:</i> Kolom <b>Kode_MK</b> dijadikan Primary Key agar setiap mata kuliah bisa <b>dikenali secara unik</b> dalam sistem akademik.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>D. Tabel Kelas</b><br>
+  <b>Kolom:</b> ID_Kelas (PK, INT AUTO_INCREMENT), Nama_Kelas (VARCHAR(30)), Kapasitas (INT(3)), Dosen_Pengajar (VARCHAR(50))<br>
+  <i>Contoh gambaran sederhana:</i> Kolom <b>ID_Kelas</b> menjadi Primary Key karena setiap kelas memiliki <b>ID tersendiri</b> yang <b>tidak boleh sama</b>.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>E. Tabel Ruang</b><br>
+  <b>Kolom:</b> Kode_Ruang (PK, CHAR(5)), Lokasi (VARCHAR(50)), Kapasitas (INT(3)), Fasilitas (VARCHAR(100))<br>
+  <i>Contoh gambaran sederhana:</i> Kolom <b>Kode_Ruang</b> dijadikan Primary Key agar setiap ruang bisa <b>diidentifikasi secara unik</b> berdasarkan kode-nya.
+</p>
+
+
+<br>
+<p style="text-align: justify; line-height: 1.7;">
+  <b>2. Foreign Key</b> adalah kolom yang berfungsi sebagai penghubung antara satu tabel dengan tabel lainnya. 
+  Bisa dibilang, kolom ini jadi “jembatan” yang nyambungin data supaya saling terhubung dan tetap konsisten. 
+  Nilai dari <b>Foreign Key</b> biasanya diambil dari kolom <b>Primary Key</b> milik tabel lain. 
+  Dengan cara ini, sistem database bisa tahu bahwa data di dua tabel itu memang saling berhubungan. 
+</p>
+<hr>
+<br>
+<p style="text-align: justify; line-height: 1.7;">
+  Berikut ini <b>5 contoh penerapan Foreign Key</b> dalam sistem basis data yang biasa digunakan saat membuat <i>Entity Relationship Diagram (ERD)</i>:
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b> A. Tabel KRS (Kartu Rencana Studi)</b><br>
+  <b>Kolom:</b> ID_KRS (PK, INT AUTO_INCREMENT), NIM (FK, INT), Kode_MK (FK, VARCHAR(8)), Semester (INT(1)), Tahun_Ajaran (VARCHAR(10))<br>
+  <i>Relasi:</i> NIM mengacu ke tabel <b>Mahasiswa</b>, dan Kode_MK mengacu ke tabel <b>Mata Kuliah</b>.<br>
+  <i>Contoh gambaran sederhana:</i> Foreign Key NIM dipakai untuk tahu mahasiswa mana yang ngambil mata kuliah tertentu.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b> B. Tabel Nilai</b><br>
+  <b>Kolom:</b> ID_Nilai (PK, INT AUTO_INCREMENT), NIM (FK, INT), Kode_MK (FK, VARCHAR(8)), Nilai_Akhir (CHAR(2))<br>
+  <i>Relasi:</i> NIM ngambil data dari <b>Mahasiswa</b>, dan Kode_MK dari <b>Mata Kuliah</b>.<br>
+  <i>Contoh gambaran sederhana:</i> Foreign Key bantu ngaitin nilai tiap mahasiswa berdasarkan mata kuliah yang diambil.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b> C. Tabel Jadwal</b><br>
+  <b>Kolom:</b> ID_Jadwal (PK, INT AUTO_INCREMENT), Kode_MK (FK, VARCHAR(8)), ID_Kelas (FK, INT), Hari (VARCHAR(10)), Jam (VARCHAR(10))<br>
+  <i>Relasi:</i> Kode_MK mengacu ke <b>Mata Kuliah</b> dan ID_Kelas ke <b>Kelas</b>.<br>
+  <i>Contoh gambaran sederhana:</i> Foreign Key pastiin jadwal kuliah selalu terhubung ke kelas dan mata kuliah yang sesuai.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b> D. Tabel Presensi</b><br>
+  <b>Kolom:</b> ID_Presensi (PK, INT AUTO_INCREMENT), NIM (FK, INT), ID_Jadwal (FK, INT), Tanggal (DATE), Status (CHAR(1))<br>
+  <i>Relasi:</i> NIM ngacu ke <b>Mahasiswa</b> dan ID_Jadwal ngacu ke <b>Jadwal</b>.<br>
+  <i>Contoh gambaran sederhana:</i> Foreign Key nyambungin siapa mahasiswa yang hadir di jadwal kuliah tertentu.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>E.  Tabel Pembayaran</b><br>
+  <b>Kolom:</b> ID_Bayar (PK, INT AUTO_INCREMENT), NIM (FK, INT), Tanggal_Bayar (DATE), Jumlah (INT), Metode (VARCHAR(20))<br>
+  <i>Relasi:</i> NIM mengacu ke tabel <b>Mahasiswa</b>.<br>
+  <i>Contoh gambaran sederhana:</i> Foreign Key bantu ngaitin transaksi pembayaran ke mahasiswa yang bersangkutan.
+</p>
+
+<br>
+<p style="text-align: justify; line-height: 1.7;">
+  <b>3. Candidate Key</b> bisa dibilang adalah kumpulan “calon terbaik” yang punya potensi buat jadi <b>Primary Key</b> di dalam sebuah tabel. 
+  Bayangin aja lo punya tabel berisi data karyawan di sebuah perusahaan  di situ ada kolom seperti Nomor Pegawai, Email Perusahaan, Nomor KTP, Nama, dan Departemen. 
+  Nah, dari semua kolom itu, ada beberapa yang sebenarnya bisa digunakan untuk membedakan setiap karyawan secara unik, misalnya <i>Nomor Pegawai</i>, <i>Email Perusahaan</i>, atau <i>Nomor KTP</i>. 
+  Itulah yang disebut <b><i>Candidate Key</i></b> kumpulan atribut yang memenuhi dua syarat penting: harus <b>unik</b> dan <b>minimal</b>. 
+  Unik artinya nilainya nggak boleh sama antar baris, dan minimal maksudnya nggak boleh berlebihan; kalau satu kolom sudah cukup buat jadi pembeda, ya nggak perlu digabung dengan kolom lain. 
+  Dari semua calon itu, nantinya hanya satu yang bakal “terpilih” dan diangkat jadi Primary Key utama, sedangkan yang lain tetap dianggap kunci kandidat yang sah.
+</p>
+
+<hr>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Berikut ini <b>5 contoh penerapan Candidate Key</b> dalam sistem basis data beserta gambaran sederhananya:
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>A. Tabel Karyawan</b><br>
+  <b>Kolom:</b> Nomor_Pegawai (INT), Email_Perusahaan (VARCHAR(50)), Nomor_KTP (CHAR(16)), Nama (VARCHAR(50)), Departemen (VARCHAR(30))<br>
+  <b>Candidate Key:</b> Nomor_Pegawai, Email_Perusahaan, Nomor_KTP<br>
+  <i>Contoh gambaran sederhana:</i> Ketiga kolom ini sama-sama bisa dipakai untuk mengenali setiap karyawan secara unik, tapi yang paling efisien biasanya <b>Nomor_Pegawai</b>.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>B. Tabel Mahasiswa</b><br>
+  <b>Kolom:</b> NIM (CHAR(10)), Email_Kampus (VARCHAR(50)), No_HP (VARCHAR(13)), Nama (VARCHAR(50)), Jurusan (VARCHAR(30))<br>
+  <b>Candidate Key:</b> NIM, Email_Kampus, No_HP<br>
+  <i>Contoh gambaran sederhana:</i> Semua mahasiswa pasti punya <b>NIM</b> dan <b>email kampus</b> yang unik, tapi biasanya NIM dipilih jadi primary key karena paling formal dan konsisten.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>C. Tabel Produk</b><br>
+  <b>Kolom:</b> Kode_Produk (VARCHAR(10)), Barcode (CHAR(13)), Nama_Produk (VARCHAR(50)), Harga (INT), Stok (INT)<br>
+  <b>Candidate Key:</b> Kode_Produk, Barcode<br>
+  <i>Contoh gambaran sederhana:</i> Setiap produk bisa diidentifikasi lewat <b>kode produk</b> atau <b>barcode</b>, tapi Kode_Produk sering dipilih jadi primary key karena lebih mudah diatur di sistem.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>D. Tabel Buku</b><br>
+  <b>Kolom:</b> ISBN (CHAR(13)), Judul (VARCHAR(100)), Penulis (VARCHAR(50)), Tahun_Terbit (YEAR)<br>
+  <b>Candidate Key:</b> ISBN, (Judul + Penulis + Tahun_Terbit)<br>
+  <i>Contoh gambaran sederhana:</i> <b>ISBN</b> selalu unik untuk setiap buku, tapi kalau nggak ada ISBN, kombinasi <b>judul</b>, <b>penulis</b>, dan <b>tahun terbit</b> juga bisa jadi pembeda.
+</p>
+
+<p style="text-align: justify; line-height: 1.6;">
+  <b>E. Tabel Kendaraan</b><br>
+  <b>Kolom:</b> Nomor_Plat (CHAR(10)), Nomor_Rangka (CHAR(17)), Nomor_Mesin (CHAR(15)), Pemilik (VARCHAR(50))<br>
+  <b>Candidate Key:</b> Nomor_Plat, Nomor_Rangka, Nomor_Mesin<br>
+  <i>Contoh gambaran sederhana:</i> Semua kendaraan bisa dibedain dari <b>nomor plat</b>, <b>rangka</b>, atau <b>mesin</b>, tapi Nomor_Rangka paling sering dijadikan primary key karena pasti berbeda untuk tiap unit kendaraan.
+</p>
+
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 NBLog - Hak cipta dilindungi.
+  </footer>
+
+</body>
+</html>

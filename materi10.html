@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBLog - Materi 10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navigasi">
+    <div class="merek">NBLog</div>
+    <div class="daftar-menu">
+      <a href="index.html">Beranda</a>
+      <div class="turun-menu">
+        <button class="tombol-menu">Menu ▼</button>
+        <div class="isi-menu">
+          <a href="materi1.html">Materi 1</a>
+          <a href="materi2.html">Materi 2</a>
+          <a href="materi3.html">Materi 3</a>
+          <a href="materi4.html">Materi 4</a>
+          <a href="materi5.html">Materi 5</a>
+          <a href="materi6.html">Materi 6</a>
+          <a href="materi7.html">Materi 7</a>
+          <a href="materi8.html">Materi 8</a>
+          <a href="materi9.html">Materi 9</a>
+          <a href="materi10.html">Materi 10</a>
+          <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Isi Materi -->
+  <section class="wadah">
+  <h2>Materi 10</h2>
+  <center><img src="materi_10.png" alt="ERD Diagram" class="gambar-materi"></center>
+  <p class="date">20 Oktober 2025</p>
+  <p><center><b>Apa itu normalisasi pada ERD?</b> </center></p>
+  <br>
+  <p style="text-align: justify; line-height: 1.6;">
+      <b>Normalisasi pada ERD</b> adalah proses untuk menata dan merapikan struktur tabel di dalam database supaya data yang disimpan <b>tidak berulang</b>, <b>tidak membingungkan</b>, dan <b>lebih efisien</b>. Tujuannya biar setiap informasi tersimpan di tempat yang seharusnya dan hubungan antar tabel tetap jelas. Ibaratnya seperti lo lagi beresin kamar yang berantakan  semua barang dipisahkan sesuai jenisnya dan ditaruh di tempat yang tepat, biar gampang dicari dan nggak numpuk di satu tempat.
+    </p>
+
+    <p style="text-align: justify; line-height: 1.6;">
+      Dalam penerapannya, normalisasi dilakukan dengan cara <i>memecah satu tabel besar</i> yang isinya banyak data campur menjadi beberapa tabel kecil yang lebih fokus dan saling terhubung lewat relasi. Dengan begitu, database jadi lebih ringan, rapi, dan gampang dikelola. Proses ini juga membantu menghindari data ganda dan menjaga konsistensi antar entitas dalam <b><i>ERD (Entity Relationship Diagram)</i></b>.
+    </p>
+
+    <p><b>Bentuk-bentuk Normalisasi:</b></p>
+    <ol style="text-align: justify; line-height: 1.6;">
+      <li><b>1NF (Bentuk Normal Pertama)</b>  setiap kolom di tabel harus berisi <i>satu nilai tunggal</i> saja, tidak boleh ada data yang ditumpuk dalam satu sel.</li>
+      <li><b>2NF (Bentuk Normal Kedua)</b>  setiap atribut harus benar-benar tergantung pada <i>kunci utama</i>. Kalau ada data yang tidak berhubungan langsung, maka harus dipindahkan ke tabel lain.</li>
+      <li><b>3NF (Bentuk Normal Ketiga)</b>  setiap kolom hanya boleh bergantung pada <i>kunci utama</i> dan tidak saling bergantung antar kolom lainnya. Tahap ini bikin struktur tabel makin efisien dan bebas dari duplikasi data.</li>
+    </ol>
+
+    <p style="text-align: justify; line-height: 1.6;">
+      <b>Contoh sederhana:</b> Bayangin ada sebuah tabel bernama <b>Pemesanan</b> yang isinya mencakup data pelanggan, produk, dan transaksi sekaligus. Dalam satu tabel itu mungkin ada kolom seperti <i>Nama_Pelanggan</i>, <i>Alamat</i>, <i>Nama_Produk</i>, <i>Harga</i>, dan <i>Jumlah</i>. Kalau pelanggan yang sama memesan beberapa produk berbeda, maka nama dan alamat pelanggan bakal berulang di setiap baris. 
+      Nah, di sinilah normalisasi berperan  data pelanggan seharusnya dipisahkan ke tabel <b>Pelanggan</b>, sedangkan data barang dimasukkan ke tabel <b>Produk</b>. Lalu tabel <b>Pemesanan</b> cukup menyimpan <i>ID_Pelanggan</i> dan <i>ID_Produk</i> sebagai penghubung.
+    </p>
+     <br>
+    <p style="text-align: justify; line-height: 1.6;">
+      Dengan pemisahan seperti itu, data jadi jauh lebih efisien. Kalau nanti ada perubahan alamat pelanggan atau harga produk, lo cukup ubah di satu tabel aja, dan semuanya otomatis ikut terhubung dengan benar. Proses kayak gini bikin database lebih konsisten, lebih gampang diperbarui, dan lebih cepat diakses.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 NBLog - Hak cipta dilindungi.
+  </footer>
+
+</body>
+</html>

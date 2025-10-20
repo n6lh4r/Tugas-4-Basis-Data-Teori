@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBLog - Materi 8</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navigasi">
+    <div class="merek">NBLog</div>
+    <div class="daftar-menu">
+      <a href="index.html">Beranda</a>
+      <div class="turun-menu">
+        <button class="tombol-menu">Menu ▼</button>
+        <div class="isi-menu">
+          <a href="materi1.html">Materi 1</a>
+          <a href="materi2.html">Materi 2</a>
+          <a href="materi3.html">Materi 3</a>
+          <a href="materi4.html">Materi 4</a>
+          <a href="materi5.html">Materi 5</a>
+          <a href="materi6.html">Materi 6</a>
+          <a href="materi7.html">Materi 7</a>
+          <a href="materi8.html">Materi 8</a>
+          <a href="materi9.html">Materi 9</a>
+          <a href="materi10.html">Materi 10</a>
+          <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Isi Materi -->
+  <section class="wadah">
+  <h2>Materi 8</h2>
+  <center><img src="materi_8.jpg" alt="ERD Diagram" class="gambar-materi"></center>
+  <p class="date">12 Oktober 2025</p>
+  <p><center><b>Apa itu relation pada ERD, Mengapa many-to-many tidak baik digunakan pada ERD</b> </center></p>
+  <br>
+  <p style="text-align: justify; line-height: 1.6;">
+  Dalam dunia perancangan basis data, khususnya ketika kita berbicara tentang 
+  <b><i>Entity-Relationship Diagram (ERD)</i></b>, hubungan atau <b><i>relation</i></b> bisa diibaratkan sebagai 
+  jembatan yang menghubungkan dua entitas. Bayangkan saja entitas seperti <b>“Mahasiswa”</b> dan 
+  <b>“Mata Kuliah”</b>. Nah, tali penghubung di antara keduanya adalah aktivitas 
+  <b><i>“Mengambil”</i></b>  sebuah aksi yang menunjukkan bahwa mahasiswa terlibat dalam proses 
+  belajar di mata kuliah tersebut. Di sinilah konsep <b><i>relation</i></b> berperan, menggambarkan bagaimana 
+  satu entitas berinteraksi dengan yang lain, lengkap dengan aturan dan batasannya: apakah satu mahasiswa 
+  boleh mengambil banyak mata kuliah, atau sebaliknya.
+</p>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Namun, hubungan yang bersifat <b><i>many-to-many</i></b> sering kali menimbulkan dilema dalam 
+  perancangan database. Alasannya sederhana: hubungan seperti ini tampak praktis di atas kertas, 
+  tapi bisa menjadi rumit saat diterapkan di sistem penyimpanan data yang nyata. Analoginya, hubungan 
+  <b><i>many-to-many</i></b> itu seperti janji besar yang terdengar mudah diucapkan, tapi sulit diwujudkan 
+  karena terlalu banyak kemungkinan di dalamnya.
+</p>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Coba bayangkan seorang mahasiswa yang mengambil mata kuliah tertentu. Dari hubungan itu, muncul informasi lain 
+  yang tidak bisa diabaikan  kapan mahasiswa tersebut mendaftar, berapa nilai ujiannya, bahkan mungkin siapa dosen 
+  pengajarnya. Data seperti ini tidak sepenuhnya milik entitas <b><i>Mahasiswa</i></b>, dan juga bukan milik 
+  <b><i>Mata Kuliah</i></b>. Ia justru lahir dari hubungan di antara keduanya.
+</p>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Nah, di sinilah letak tantangannya. Sistem basis data relasional tidak bisa langsung menampung hubungan 
+  <b><i>many-to-many</i></b> seperti ini. Maka dari itu, perancang database biasanya akan “memecah” hubungan tersebut 
+  menjadi dua relasi yang lebih sederhana dan lebih mudah dikelola. Caranya adalah dengan menambahkan entitas baru 
+  sebagai penghubung misalnya diberi nama <b>“KRS”</b>, <b>“Nilai”</b>, atau <b>“Daftar Ambil Mata Kuliah”</b>. 
+  Entitas inilah yang berfungsi menyimpan detail hubungan antara <b><i>Mahasiswa</i></b> dan 
+  <b><i>Mata Kuliah</i></b> secara lebih spesifik.
+</p>
+<br>
+<p style="text-align: justify; line-height: 1.6;">
+  Jadi, sebenarnya bukan berarti hubungan <b><i>many-to-many</i></b> itu salah atau harus dihindari. Kehadirannya 
+  justru menjadi sinyal bahwa ada informasi tambahan yang belum tergambar dengan jelas. Ia seperti bisikan halus 
+  dalam desain yang mengingatkan kita untuk lebih teliti: bahwa di balik hubungan sederhana antara dua entitas, 
+  ada cerita yang lebih kompleks dan menarik yang perlu diakomodasi. Dengan memahami hal ini sejak awal, seorang 
+  perancang database bisa membuat struktur yang lebih rapi, fleksibel, dan siap menampung dinamika data di dunia nyata.
+</p>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 NBLog - Hak cipta dilindungi.
+  </footer>
+
+</body>
+</html>
